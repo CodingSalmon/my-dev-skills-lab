@@ -15,7 +15,6 @@ $addButtonEl.click(function(){
 });
 
 $('ul').on('click','button',function(){
-    $(this).parent().fadeOut();
-    console.log('delete')
+    $(this).parent().remove();
 });
 //Functions
