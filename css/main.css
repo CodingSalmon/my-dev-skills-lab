@@ -1,55 +1,73 @@
 *{
     box-sizing:border-box;
-    border-radius:0;
 }
 
 body{
-    margin:0;
-    font-family:Helvetica;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    height:90vh;
-    width:100vw;
+    min-height:100vh;
+    min-width:100vw;
+    margin:0;
+    font-family:Helvetica;
+    background-color:black;
 }
 
-div{
-    height:150px;
+main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border:5px grey solid;
+    min-height:80vh;
+    width:750px;
+    background-color:white;
 }
 
-header{
+main > h1{
+    font-size:30px;
     color:white;
-    background-color: rgba(158,194,133);
+    background-color: yellowgreen;
     text-align:center;
+    width:400px;
+    margin-bottom:0;
+}
+
+#skills{
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    list-style-type:none;
+    color: gold;
+    padding-left:0;
+}
+
+.delSkill{
+    background-color:red;
+    color:white;
+    border:none;
+    margin-right:10px;
+    padding:2px 5px;
+}
+
+#skills > li{
     padding:5px 0;
 }
 
-ul{
-    list-style-type:none;
-    padding:0;
+#controls{
+    display:flex;
+    justify-content:space-between;
+    width:400px;
 }
 
-.deleteSkill{
-    border:none;
-    background-color: rgba(210,109,106);
-    color:white;
-    padding:2px 6px;
-    margin-right:10px;
+#controls > input{
+    height:32px;
+    border:3px yellowgreen solid;
+    width:320px;
 }
 
-li{
-    margin:10px 0;
-    color:rgba(242,160,61);
-    font-size:13px;
-}
-
-input{
-    width:40vw;
-    border:2px rgba(158,194,133) solid;
-    margin-right:5px;
-}
-
-#addSkill{
-    color:rgba(158,194,133);
-    border:2px rgba(158,194,133) solid;
+#controls > button{
+    border:3px yellowgreen solid;
+    color:yellowgreen;
 }

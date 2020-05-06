@@ -1,11 +1,21 @@
-$('.deleteSkill').click(function(){
-    $(this).parent().fadeOut();
+//Constants
+
+//Cached Element References
+let $addButtonEl = $('section > button');
+let $delButtonEl = $('ul > li > button');
+let $inputEl = $('input');
+const $skillsListEl = $('#skills');
+
+//Event Listeners
+$addButtonEl.click(function(){
+    let $skillText = $inputEl.val();
+    let newSkill = (`<li><button class="delSkill">X</button>${$skillText}</li>`);
+    $inputEl.val('');
+    $('ul').append(newSkill);
 });
 
-$('#addSkill').click(function(){
-    let $skillText = $('input').val();
-    let newSkill = $('ul').HTML(`<li><button class="deleteSkill">X</button>${$skillText}</li>`);
-    
-    $('ul').append(newSkill);
-    console.log(newSkill)
+$('ul').on('click','button',function(){
+    $(this).parent().fadeOut();
+    console.log('delete')
 });
+//Functions
