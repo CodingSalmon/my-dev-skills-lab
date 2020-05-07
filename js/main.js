@@ -10,6 +10,7 @@ const $skillsListEl = $('#skills');
 $addButtonEl.click(function(){
     let $skillText = $inputEl.val();
     let newSkill = (`<li><button class="delSkill">X</button>${$skillText}</li>`);
+    if (!$skillText.length) return;
     $inputEl.val('');
     $('ul').append(newSkill);
 });
