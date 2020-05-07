@@ -1,5 +1,3 @@
-//Constants
-
 //Cached Element References
 let $addButtonEl = $('section > button');
 let $delButtonEl = $('ul > li > button');
@@ -18,4 +16,3 @@ $addButtonEl.click(function(){
 $('ul').on('click','button',function(){
     $(this).parent().remove();
 });
-//Functions
